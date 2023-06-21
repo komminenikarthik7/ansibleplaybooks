@@ -1,0 +1,9 @@
+---
+- name: create a file by using yml script
+  hosts: all
+  become: true
+  tasks: 
+  - name: creating a file using yml script
+    file:
+      path: /home/ansadmin/filecre
+      state: touch 

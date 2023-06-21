@@ -1,0 +1,11 @@
+---
+- name: creating multiple users
+  hosts: mygroup
+  become: true
+  tasks: 
+    - name: add a list of users
+      user: name='{{ item }}' state=present
+      with_items: 
+         - karthik1
+         - karthik2
+         - karthik3

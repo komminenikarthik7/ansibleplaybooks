@@ -1,0 +1,10 @@
+---
+- name: creating main playbook for users and change with the child file
+  hosts: all
+  become: true
+  vars_files: 
+  - user.yml
+  tasks:
+  - name: creating user "{{user1}}"
+    user:
+      name: "{{user1}}"

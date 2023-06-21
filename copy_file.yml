@@ -1,0 +1,11 @@
+---
+- name: copy afile into nodes
+  hosts: all
+  become: true
+  tasks: 
+  - name: copy afile into nodes
+    copy: 
+      src: /home/ansadmin/index.html
+      dest: /home/ansadmin
+      mode: 0600
+      owner: karthik
